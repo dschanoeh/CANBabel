@@ -19,15 +19,18 @@ and maven will fetch all dependencies and build **CANBabel**. You can also just 
 
 ## KCD Example
 
-	<Bus name="Comfort" baudrate="125000">
-		<Message id="0x21C" name="Temperature">
-			<Producer>
-				<NodeRef id="15"/>
-			</Producer>
-			<Signal name="InsideTempC" offset="0" length="12">
-				<Value type="signed" unit="Cel"/>
-			</Signal>
-			<Signal name="OutsideTempC" offset="12" length="12">
-				<Value type="signed" unit="Cel"/>
-			</Signal>
-		</Message>
+	<NetworkDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://kayak.2codeornot2code.org/1.0" xsi:noNamespaceSchemaLocation="Definition.xsd">
+		<Bus name="Comfort" baudrate="125000">
+			<Message id="0x21C" name="Temperature">
+				<Producer>
+					<NodeRef id="15"/>
+				</Producer>
+				<Signal name="InsideTempC" offset="0" length="12">
+					<Value type="signed" unit="Cel"/>
+				</Signal>
+				<Signal name="OutsideTempC" offset="12" length="12">
+					<Value type="signed" unit="Cel"/>
+				</Signal>
+			</Message>
+		</Bus>
+	</NetworkDefinition>
